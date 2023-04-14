@@ -1,3 +1,4 @@
+prompt_toolkit
 datetime
 requests
 cfscrape
@@ -6,4 +7,3 @@ pysocks
 colorama
 undetected_chromedriver
 cloudscraper
-prompt_toolkit
