@@ -6,3 +6,4 @@ pysocks
 colorama
 undetected_chromedriver
 cloudscraper
+prompt_toolkit
