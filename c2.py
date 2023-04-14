@@ -237,7 +237,7 @@ def menu():
 def main():
     menu()
     while(True):
-        cnc = input('''[ZxCDDOS x NEPMODS]  \n➤ ''')
+        cnc = getpass.getpass('''[ZxCDDOS x NEPMODS]  \n➤ ''')
         if cnc == "layer7" or cnc == "LAYER7" or cnc == "L7" or cnc == "l7":
             layer7()
         elif cnc == "layer4" or cnc == "LAYER4" or cnc == "L4" or cnc == "l4":
