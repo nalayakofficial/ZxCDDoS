@@ -184,7 +184,6 @@ func httpcall(url string, host string, data string, headers arrayFlags, s chan u
 
 		if err != nil {
 			s <- callExitOnErr
-                        fmt.Print("\033[H\033[2J")
 			return
 		}
 
@@ -205,7 +204,6 @@ func httpcall(url string, host string, data string, headers arrayFlags, s chan u
 
 		r, e := client.Do(q)
 		if e != nil {
-			fmt.Fprintln(os.Stderr, e.Error())
 			if strings.Contains(e.Error(), "socket: too many open files") {
 				s <- callExitOnTooManyFiles
 				return
