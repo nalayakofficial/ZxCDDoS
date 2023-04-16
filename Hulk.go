@@ -20,7 +20,6 @@ import (
 	"strings"
 	"sync/atomic"
 	"syscall"
-        "os"
 )
 
 const __version__  = "1.0.1"
@@ -185,7 +184,6 @@ func httpcall(url string, host string, data string, headers arrayFlags, s chan u
 
 		if err != nil {
 			s <- callExitOnErr
-                        syscall.Syscall(syscall.SYS_IOCTL, uintptr(syscall.Stdout), uintptr(syscall.TIOCGWINSZ), uintptr(unsafe.Pointer(&ws)))
                         fmt.Print("\033[H\033[2J")
 			return
 		}
