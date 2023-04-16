@@ -22,6 +22,7 @@ import (
 	"strconv"
 	"strings"
 	"time"
+	"os/exec"
 )
 
 var (
@@ -198,6 +199,9 @@ func flood() {
 		}
 		if err != nil {
 			fmt.Println("Connection Down!!!") //When showing this message, it means ur ip got blocked or the target server down.
+			cmd := exec.Command("clear")
+            cmd.Stdout = os.Stdout
+            cmd.Run()
 		} else {
 			for i := 0; i < 100; i++ {
 				request := ""
