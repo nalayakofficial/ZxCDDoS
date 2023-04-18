@@ -22,7 +22,6 @@ import (
 	"strconv"
 	"strings"
 	"time"
-	"os/exec"
 )
 
 var (
